@@ -69,5 +69,16 @@ console.log( typeof (8) ); // 'number'
 console.log( typeof "4" * "2" ); // NaN
 console.log( 'string' * "2" ); // NaN
 
+// --- Precisión y Límites ---
+// Cuidado: JS usa punto flotante (IEEE 754), lo que causa errores en decimales.
 
+console.log("--- Precisión ---");
+console.log(`0.1 + 0.2 = ${0.1 + 0.2}`); // 0.30000000000000004 (Ojo en entrevistas)
 
+console.log("--- Límites ---");
+console.log(`Entero seguro máximo: ${Number.MAX_SAFE_INTEGER}`); // 9007199254740991
+console.log( `MAX_SAFE_INTEGER + 1: ${Number.MAX_SAFE_INTEGER + 1 }`); // 9007199254740992
+console.log( `MAX_SAFE_INTEGER + 2: ${Number.MAX_SAFE_INTEGER + 2 }`); // 9007199254740993
+console.log( `MAX_SAFE_INTEGER + 3: ${Number.MAX_SAFE_INTEGER + 3 }`); // 9007199254740994
+console.log( `MAX_SAFE_INTEGER + 4: ${Number.MAX_SAFE_INTEGER + 4 }`); // 9007199254740995
+console.log( `MAX_SAFE_INTEGER + 5: ${Number.MAX_SAFE_INTEGER + 5 }`); // 9007199254740996
