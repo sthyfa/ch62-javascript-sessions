@@ -49,6 +49,8 @@ if (isActive == true) console.log("El usuario está activo");
 
 if (isActive === true) {
     console.log("El usuario está activo");
+} else {
+    console.log("El usuario no está activo");
 }
 
 if (isActive) {
@@ -76,3 +78,11 @@ if (isActive) {
 }
 // console.log(firtsName,lastName,alias, age); firtsName is not defined
 console.log(alias); // Serchmo
+
+/*
+ Realizar una función (Arrow function) que reciba un número como valor de temperatura.
+ Si la temperatura es mayor a 25 grados, retornar "Hace calor".
+ En caso contrario, retornar "Hace frío".
+
+ Imprimir el valor del retorno por consola.
+*/
