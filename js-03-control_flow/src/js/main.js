@@ -155,3 +155,48 @@ console.log( isLoggedIn && "El usuario está logueado" || "El usuario no está l
     45, 48	    Fog and depositing rime fog
     
 */
+const getWeather=(codigo)=>{
+     let message;
+    if(codigo===0){
+        message="Clear Sky";
+    }else if( codigo===1 ||codigo===2 ||codigo===3  ){
+        message="Mainly clear, partly cloudy, and overcast";
+    }else if(codigo===45 || codigo===48){
+        message="Fog and depositing rime fog";
+    }else{
+        message="no definido";
+    }
+    return message;
+   
+}
+
+console.log(getWeather(88));
+
+
+//--------------- Condicional Switch-case --------------------------
+/*
+ La condicional Switch evalua una expresión y se compara
+ con el valor de cada instancia en 'case' y se ejecuta las
+ sentencias asociadas a ese 'case' hasta encontrar
+ la sentencia 'break' o se finalicen todas las sentencias
+ de la condicional switch.
+
+ Para comparar la condicional switch usa el operador estricto ===
+
+ Sintaxis:
+  switch (expresión) {
+    case valor1:
+        sentencia;
+        break;
+    case valor 2:
+        sentencias;
+        break;
+    case valor n:
+        sentencias;
+        break
+    default:
+        sentencias;
+        break;
+  }
+
+*/
