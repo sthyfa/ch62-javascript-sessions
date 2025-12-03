@@ -219,29 +219,10 @@ console.log(getWeather(88));
 */
 // si no se coloca un break, el switch case se sigue ejecutando hasta el siguiente break o hasta terminar el switch 
 
-const getAccessLevel = ( role ) => {
-    let accessLevel;
-    switch ( role ) {
-        case "admin":
-            accessLevel = "Acceso completo al sistema";
-            break;
-        case "editor":
-            accessLevel = "Acceso para editar contenido";
-            break;  
-        case "viewer":
-            accessLevel = "Acceso solo para ver contenido";
-            break;
-        default:
-            accessLevel = "Acceso denegado";
-    }
-    return accessLevel;
-};
-console.log( getAccessLevel("editor") ); // Acceso para editar contenido
 
 /**
- * switch case con el patrón "Early Return"
-
- */
+ * Switch case con el patrón "Single Entry, Single Exit"
+  */
 
 const getAccessLevelOne = ( role ) => {
     switch ( role ) {
@@ -317,6 +298,36 @@ console.log( getWeatherSwitch(50) );
 
 /*
 
+/*
+ Refactorizar la función getWeather usando switch-case
+*/
+//const getWeatherSwitch=(codigo)=>
+    const getWeatherSwitch=(codigo)=>{
+     let message;
+     switch ( codigo){
+        case 0 :
+            message="Clear Sky";
+            break
+        case 1:
+        case 2:
+        case 3:
+            message="Mainly clear, partly cloudy, and overcast";
+            break;
+        case 45:
+        case 48: 
+            message="Fog and depositing rime fog";
+            break
+        default :
+            message="no definido";
+     }
+     return message;  
+    } 
+
+console.log (getWeatherSwitch(45));
+
+// ==========================================================
+
+/*
  Dado un número entero, imprimir:
 
  "Negativo":  si el número es menor a 0.
@@ -372,9 +383,19 @@ console.log(evaluarElNumeroSwitch(100) ); // Grande
 /*
  Es el único operador de JavaScript que tiene 3 operandos.
  Generalmente se utiliza como opción a la sentencia if-else.
+
  Sintaxis:
   condición ? expresiónSiCondiciónEsVerdadera : expresionSiCondiciónEsFalsa; 
+
 */
+
+const votingEligibility = (age) => {
+    return age >= 18 ? "Puede votar" : "No puede votar";
+}
+
+console.log(votingEligibility(20)); // Puede votar
+console.log(votingEligibility(16)); // No puede votar
+
 
 /*
  Realizar una función que reciba un número y retorne

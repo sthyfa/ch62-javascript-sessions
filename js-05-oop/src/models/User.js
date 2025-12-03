@@ -4,6 +4,7 @@ sobre los prototipos, pero ofrecen una estructura mucho más limpia y
 familiar para programadores de otros lenguajes (como Java o C#).
 
 Sus principales ventajas son:
+<<<<<<< HEAD
 Reutilización (Plantillas): Funcionan como un "molde". 
     Escribes la lógica una vez y creas (instancias) miles de objetos con ella.
 
@@ -15,6 +16,18 @@ Encapsulamiento: Facilita la protección de datos internos y
 
 O
 rganización: Agrupa datos y comportamientos relacionados en un solo bloque lógico.
+=======
+- Reutilización (Plantillas): Funcionan como un "molde". 
+    Escribes la lógica una vez y creas (instancias) miles de objetos con ella.
+
+- Herencia (extends): Permite crear clases nuevas basadas en 
+    otras existentes, heredando sus propiedades y métodos sin duplicar código.
+
+- Encapsulamiento: Facilita la protección de datos internos y 
+    lógica sensible mediante campos privados (#).
+
+- Organización: Agrupa datos y comportamientos relacionados en un solo bloque lógico.
+>>>>>>> main
 
 Recomendaciones para el nombre de las clases:
  - Usar un sustantivo o una combinación de sustantivo y adjetivo que describa claramente el propósito de la clase.
@@ -25,12 +38,17 @@ Recomendaciones para el nombre de las clases:
 */
 
 class User {
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
     constructor( firstName, lastName, age, correoElectronico ) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.email = correoElectronico;
     }
+<<<<<<< HEAD
     /** Saludar */
     greet() {
         return `Hello, I'm ${this.firstName} ${this.lastName}, ${this.age} years old.`;
@@ -39,3 +57,15 @@ class User {
 }
 
 export {User};
+=======
+
+    /** Saludar */
+    greet() {
+        return `Hello, I'm ${this.firstName} ${this.lastName}, ${this.age} years old. ${this.email}`;
+    }
+
+
+}
+
+export { User };
+>>>>>>> main
