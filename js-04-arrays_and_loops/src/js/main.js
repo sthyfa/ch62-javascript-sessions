@@ -195,3 +195,4 @@ for(let i = 0; i < transactions.length; i++){
 }
 
 console.log(`El total es igual a: ${totalBalance}`);
+
