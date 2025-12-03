@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-// document.getElementById("title").innerText = "OOP in JavaScript, Cohorte 62";
-import {changePrincipalTitle} from "../js/modules/changePrincipalTitle.js";
-import { changeLogo } from "./modules/changeLogo.js";
-import { aliceUser } from "../js/modules/literalObject.js";
-import { User } from "../models/User.js";
-
-changePrincipalTitle("title");
-changeLogo("cat.jpg");
-
-=======
 // importanción nombrada
 import { User } from "../models/User.js";
 import { changeLogo } from "./modules/changeLogo.js";
@@ -23,19 +12,13 @@ changePrincipalTitle("title");
 changeLogo("cat.jpg");
 
 console.log( aliceUser.getFullName() );
->>>>>>> main
 console.log( aliceUser );
 console.log( aliceUser.stringify() );
 
 const fatima = new User("Fatima", "Orozco", 25, "fatima@gmail.com");
-<<<<<<< HEAD
-console.log(fatima.greet());
-=======
 const juan = new User("Juan", "Perez", 28, "juan@gmail.com");
 const luis = new User("Luis", "Ramirez", 32, "luis@gmail.com");
 
-console.log( luis.greet() ); // Hello, I'm Luis Ramirez, 32 years old.
-console.log( juan.greet() ); // Hello, I'm Luis Ramirez, 32 years old.
-console.log( fatima.greet() ); // Hello, I'm Luis Ramirez, 32 years old.
->>>>>>> main
-
+console.log( luis.greet() ); // Hello, I'm Luis Ramirez, 32 years old. luis@gmail.com
+console.log( juan.greet() ); // Hello, I'm Juan Perez, 28 years old. juan@gmail.com
+console.log( fatima.greet() ); // Hello, I'm Fatima Orozco, 25 years old. fatima@gmail.com.
